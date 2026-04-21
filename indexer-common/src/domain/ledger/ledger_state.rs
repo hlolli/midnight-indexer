@@ -1099,6 +1099,7 @@ mod tests {
 
             let pool = SqlitePool::new(pool::sqlite::Config {
                 cnn_url: sqlite_file,
+                ..Default::default()
             })
             .await
             .context("create pool")?;
